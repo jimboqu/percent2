@@ -1,0 +1,25 @@
+/* Empty. Add your own CSS if you like */
+
+body {
+	background-color: #FCE8D1;
+}
+
+.switches {
+	margin: 20px, 0px, 20px, 0px;
+}
+
+.figin {
+	margin-top: 20px;
+}
+
+.card { 
+	margin-top: 20px;
+	margin-bottom: 50px;
+	
+ }
+
+
+ .submit {
+ 	position: relative;
+ 	top: 100px;
+ }
