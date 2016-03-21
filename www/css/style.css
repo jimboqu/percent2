@@ -5,11 +5,14 @@ body {
 }
 
 .switches {
-	margin: 20px, 0px, 20px, 0px;
+	position: relative;
+	top: 40px;
 }
 
 .figin {
-	margin-top: 20px;
+	padding-top: 20px;
+	position: relative;
+	top: 60px;
 }
 
 .card { 
@@ -23,3 +26,5 @@ body {
  	position: relative;
  	top: 100px;
  }
+
+

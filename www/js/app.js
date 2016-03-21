@@ -42,6 +42,13 @@ app.controller('LogicCtrl', function($scope) {
       }
       $scope.answer = answer;
   }
+
+  $scope.clear = function() {
+    $scope.Xper.num = NaN;
+    $scope.Yper.num = NaN;
+
+  }
+
 });
 
 
