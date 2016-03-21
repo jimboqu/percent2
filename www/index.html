@@ -32,33 +32,36 @@
         <br>
         <div ng-controller="LogicCtrl">
         <div class="button-bar switches">
-          <a class="button button-positive" ng-model="xy">X of Y</a>
-          <a class="button button-calm" ng-model="x">X%</a>
-          <a class="button button-energized" ng-model="id">In/Dec</a>
+          <a class="button button-positive" ng-model="xy" ng-click="option(1, Xper.num, Yper.num)">X of Y</a>
+          <a class="button button-calm" ng-model="x" ng-click="option(2, Xper.num, Yper.num)">X%</a>
+          <a class="button button-energized" ng-model="id" ng-click="option(3,Xper.num, Yper.num)" >In/Dec</a>
           <a class="button button-balanced" ng-model="clear">Clear</a>
         </div>
         <div class="figin">
         <div class="list">
           <label class="item item-input">
-            <input type="text" placeholder="X figure">
+            <input type="text" ng-model="Xper.num" placeholder="X figure">
           </label>
           <label class="item item-input">
-            <input type="text" placeholder="Y figure">
+            <input type="text" ng-model="Yper.num" placeholder="Y figure">
           </label>
           </div>
           <div class="card">
             <div class="item item-text-wrap">
               <ul>
-                <li>X% of Y% — X is what percentage of Y</li>
-                <li>X% — What is X% of Y</li>
-                <li>In/De — Y's increase/decrease as a percentage of X</li>
+                <li></li>
+                <li ng-hide="xy">X% of Y —  what percentage is {{Xper.num}} of {{Yper.num}}?</li>
+                <li>X% — What percentage is {{Xper.num}} of {{Yper.num}}?</li>
+                <li>In/De — {{Yper.num}} as increase/decrease of {{Xper.num}}</li>
               </ul>            
             </div>
           </div>
-          
-          <button class="button button-full button-positive submit" ng-click="fun()">
-            Submit
-          </button>
+            <div class="card">
+              <div class="item item-text-wrap">
+                The answer is {{answer}}%
+              </div>
+            </div>
+        
           </div>
         </div>
       </ion-content>
