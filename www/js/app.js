@@ -25,28 +25,32 @@ var app = angular.module('starter', ['ionic'])
 
 
 app.controller('LogicCtrl', function($scope) {
+  $scope.answer = "The answer...";
   $scope.option = function(o, x, y){
     var x = parseInt(x);
     var y = parseInt(y);
-    if (o == 1) {
-      var answer = x / y * 100;
-    } else if (o == 2) {
-      var answer = x * y /100;
+    if (isNaN(x || y)) {
+        $scope.answer = "You need to pick two numbers."
+        return;
+      } 
 
+      else if (o == 1) {
+      $scope.answer = "The answer is " + x / y * 100+"%";
+      return;
+    } else if (o == 2) {
+      $scope.answer = "The answer is " + x * y /100;
+      return;
     } else {
       var answer = (y - x);
       var answer = (answer / x * 100);};
       answer = Math.round(answer);
-      if (isNaN(answer)) {
-        answer = "You need to pick two numbers."
-      }
-      $scope.answer = answer;
+      $scope.answer = "The answer is " + answer +"%";
   }
 
   $scope.clear = function() {
-    $scope.Xper.num = NaN;
-    $scope.Yper.num = NaN;
-
+    $scope.Xper.num = "";
+    $scope.Yper.num = "";
+    $scope.answer = "The answer is..."
   }
 
 });

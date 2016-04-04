@@ -26,6 +26,10 @@
 
     <ion-pane>
       <ion-header-bar class="bar-dark">
+
+        
+  
+
         <h1 class="title" style="text-align: center;">PercentMe</h1>
       </ion-header-bar>
       <ion-content>
@@ -51,14 +55,14 @@
               <ul>
                 <li></li>
                 <li ng-hide="xy">X% of Y —  what percentage is {{Xper.num}} of {{Yper.num}}?</li>
-                <li>X% — What percentage is {{Xper.num}} of {{Yper.num}}?</li>
-                <li>In/De — {{Yper.num}} as increase/decrease of {{Xper.num}}</li>
+                <li>X% — What is {{Xper.num}}% of {{Yper.num}}?</li>
+                <li>In/De — How much is {{Yper.num}} as increase/decrease on {{Xper.num}}</li>
               </ul>            
             </div>
           </div>
             <div class="card">
               <div class="item item-text-wrap" id="ans">
-                The answer is {{answer}}%
+                {{answer}}
               </div>
             </div>
         
